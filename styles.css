@@ -1,0 +1,677 @@
+
+/* =========================
+   VARIABLES DEL PROYECTO
+========================= */
+
+:root {
+
+    /* Colores principales */
+
+    --primary: #fb6942;
+    --primary-dark: #e85531;
+
+    /* Colores del dashboard */
+
+    --sidebar: #1e293b;
+    --sidebar-hover: #334155;
+
+    /* Textos */
+
+    --text: #1e293b;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+
+    /* Fondos */
+
+    --background: #f1f5f9;
+    --surface: #ffffff;
+    --surface-light: #f8fafc;
+
+    /* Bordes */
+
+    --border: #e2e8f0;
+
+    /* Estados */
+
+    --success: #16a34a;
+    --success-background: #dcfce7;
+
+    --warning: #92400e;
+    --warning-background: #fef3c7;
+
+    /* Otros */
+
+    --radius: 14px;
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    --transition: 0.3s;
+
+}
+
+
+
+* { box-sizing: border-box; }
+
+
+body { margin: 0; font-family: Arial, sans-serif; }
+
+
+.dashboard { 
+    
+    min-height: 100vh;
+     display: grid; grid-template-columns: 240px 1fr; 
+     grid-template-rows: 80px 1fr 50px; 
+     grid-template-areas: "sidebar header" "sidebar main" "sidebar footer"; 
+
+}
+
+
+.sidebar { 
+
+    grid-area: sidebar;
+    background-color: #1e293b; 
+    color: white; 
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.header { 
+    grid-area: header; 
+    background-color: #ffffff; 
+
+} 
+
+.main { 
+    grid-area: main; 
+    background-color: #f1f5f9; 
+
+} 
+
+.footer { 
+    grid-area: footer; 
+    background-color: #ffffff; 
+
+}
+
+
+
+.logo { 
+    font-size: 28px; 
+    font-weight: bold; 
+    padding: 10px; 
+    margin-bottom: 30px;
+    align-items: center;
+
+} 
+
+
+
+
+ 
+/* NAVEGACIÓN */ 
+
+.navigation { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; 
+} 
+
+/* ENLACES */ 
+
+.nav-link { 
+
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    padding: 12px; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 8px; 
+    transition: 0.3s; 
+} 
+
+.nav-img { 
+
+    Width: 200px; 
+    height: 200px;
+    align-items: center;
+    gap: 12px;
+
+}
+
+/* HOVER */ 
+
+.nav-link:hover { 
+
+    background-color: #334155; 
+} 
+
+/* ELEMENTO ACTIVO */ 
+
+.nav-link.active { 
+
+    background-color: #fb6942; 
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    grid-area: header;
+
+    background-color: #ffffff;
+
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+/* LADO IZQUIERDO */
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* TÍTULO */
+
+.header h1 {
+    margin: 0;
+
+    font-size: 24px;
+
+    color: #1e293b;
+}
+
+.header p {
+    margin: 4px 0 0;
+
+    font-size: 14px;
+
+    color: #64748b;
+}
+
+
+/* BOTÓN DEL MENÚ */
+
+.menu-button,
+.notification-button {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    padding: 8px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+
+/* HOVER DE BOTONES */
+
+.menu-button:hover,
+.notification-button:hover {
+    background-color: #f1f5f9;
+}
+
+
+/* LADO DERECHO */
+
+.header-right {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* USUARIO */
+
+.user {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* INFORMACIÓN DEL USUARIO */
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+
+    text-align: right;
+}
+
+.user-info strong {
+    color: #1e293b;
+}
+
+.user-info span {
+    font-size: 12px;
+
+    color: #64748b;
+}
+
+
+/* AVATAR */
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #fb6942;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+    grid-area: main;
+
+    padding: 30px;
+
+    overflow-y: auto;
+}
+
+
+/* ENCABEZADO DEL MAIN */
+
+.main-header {
+    margin-bottom: 25px;
+}
+
+.main-header h2 {
+    margin: 0;
+
+    font-size: 24px;
+
+    color: #1e293b;
+}
+
+.main-header p {
+    margin: 6px 0 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* TARJETA */
+
+.card {
+
+    background-color: white;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    border: 1px solid #e2e8f0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+
+/* EFECTO HOVER */
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary);
+}
+
+
+/* CONTENIDO */
+
+.card-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.card-title {
+
+    font-size: 14px;
+
+    color: #64748b;
+}
+
+
+.card strong {
+
+    font-size: 24px;
+
+    color: #1e293b;
+}
+
+
+/* CAMBIO PORCENTUAL */
+
+.card-change {
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.card-change.positive {
+
+    color: #16a34a;
+}
+
+
+/* ICONO */
+
+.card-icon {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 10px;
+
+    background-color: #fff1ed;
+
+    color: #fb6942;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   TABLA
+========================= */
+
+.table-section {
+
+    margin-top: 30px;
+
+    background-color: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+
+/* ENCABEZADO DE LA TABLA */
+
+.table-header {
+
+    padding: 20px 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+.table-header h2 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #1e293b;
+}
+
+
+.table-header p {
+
+    margin: 5px 0 0;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* BOTÓN */
+
+.view-button {
+
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    background-color: #fb6942;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.view-button:hover {
+
+    background-color: #e85531;
+}
+
+
+/* CONTENEDOR */
+
+.table-container {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* TABLA */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 700px;
+}
+
+
+/* ENCABEZADOS */
+
+th {
+
+    padding: 15px 22px;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    color: #64748b;
+
+    background-color: #f8fafc;
+
+    font-weight: 600;
+}
+
+
+/* CELDAS */
+
+td {
+
+    padding: 16px 22px;
+
+    border-top: 1px solid #e2e8f0;
+
+    font-size: 14px;
+
+    color: #334155;
+}
+
+
+/* FILA */
+
+tbody tr {
+
+    transition: 0.2s;
+}
+
+
+tbody tr:hover {
+
+    background-color: #f8fafc;
+}
+
+
+/* ESTADOS */
+
+.status {
+
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.status.paid {
+
+    background-color: #dcfce7;
+
+    color: #166534;
+}
+
+
+.status.pending {
+
+    background-color: #fef3c7;
+
+    color: #92400e;
+}
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .dashboard {
+
+        grid-template-columns: 200px 1fr;
+
+        grid-template-areas:
+            "sidebar header"
+            "sidebar main"
+            "sidebar footer";
+    }
+
+
+    .cards {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+.footer {
+    grid-area: footer;
+
+    background-color: var(--surface);
+
+    padding: 0 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.nav-link:focus,
+.menu-button:focus,
+.notification-button:focus,
+.view-button:focus {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}

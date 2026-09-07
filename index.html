@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Administrativo</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                GEDA
+            </div>
+
+            <nav class="navigation" aria-label="Navegación principal">
+
+                <a href="#" class="nav-link active">
+                    <span>▣</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>▤</span>
+                    <span>Ventas</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>♙</span>
+                    <span>Usuarios</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>□</span>
+                    <span>Productos</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>⚙</span>
+                    <span>Configuración</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>⎋</span>
+                    <span>Cerrar sesión</span>
+                </a>
+
+                <a href= "#" class="nav-logo">
+
+                    <img src=imagenes/LOGO.png alt="Logo de la aplicación" class="nav-img">
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <header class="header">
+
+            <div class="header-left"> 
+
+             <button class="menu-button" type="button" aria-label="Abrir menú">
+                ☰ 
+             </button> 
+
+                <div> 
+                    <h1>Dashboard</h1>
+                    <p>Resumen general</p> 
+                </div> 
+
+            </div>
+
+
+            <div class="header-right"> 
+
+                <button class="notification-button" type="button" aria-label="Notificaciones">
+                   🔔 
+                </button> 
+
+                <div class="user"> 
+
+                    <div class="user-info"> 
+                        <strong>GEDA</strong> 
+                        <span>Administrador</span> 
+
+                    </div> 
+                
+                    <div class="user-avatar" aria-hidden="true"> 
+                        G 
+                    </div> 
+                </div> 
+            </div>
+
+
+        </header>
+
+
+            
+        <main class="main">
+
+            <div class="main-header">
+
+                <div>
+                    <h2>Resumen general</h2>
+                    <p>Información de tu sistema de gestión</p>
+                </div>
+
+            </div>
+
+
+            <section class="cards" aria-label="Resumen de estadísticas">
+
+                <article class="card">
+
+                    <div class="card-content">
+                        <span class="card-title">Ventas</span>
+                        <strong>$12.450.000</strong>
+                        <span class="card-change positive">+12.5%</span>
+                    </div>
+
+                    <div class="card-icon" aria-hidden="true">
+                        $
+                    </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-content">
+                        <span class="card-title">Usuarios</span>
+                        <strong>1.250</strong>
+                        <span class="card-change positive">+8.2%</span>
+                    </div>
+
+                    <div class="card-icon" aria-hidden="true">
+                        U
+                    </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-content">
+                        <span class="card-title">Productos</span>
+                        <strong>856</strong>
+                        <span class="card-change positive">+5.4%</span>
+                    </div>
+
+                    <div class="card-icon" aria-hidden="true">
+                        P
+                    </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-content">
+                        <span class="card-title">Ingresos</span>
+                        <strong>$8.250.000</strong>
+                        <span class="card-change positive">+15.3%</span>
+                    </div>
+
+                    <div class="card-icon" aria-hidden="true">
+                        $
+                    </div>
+
+                </article>
+
+            </section>
+
+            <section class="table-section" aria-labelledby="sales-title">
+
+                <div class="table-header">
+
+
+                    <div>
+                        <h2 id="sales-title">Últimas ventas</h2>
+                        <p>Registro de las ventas más recientes</p>
+                    </div>
+
+                    <button class="view-button" type="button">
+                        Ver todas
+                    </button>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Producto</th>
+                                <th>Fecha</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+                                <td>Carlos Pérez</td>
+                                <td>Laptop</td>
+                                <td>06/09/2026</td>
+                                <td>$3.500.000</td>
+                                <td>
+                                    <span class="status paid">Pagado</span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>María Gómez</td>
+                                <td>Monitor</td>
+                                <td>05/09/2026</td>
+                                <td>$2.100.000</td>
+                                <td>
+                                    <span class="status paid">Pagado</span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>Juan Rodríguez</td>
+                                <td>Teclado</td>
+                                <td>04/09/2026</td>
+                                <td>$350.000</td>
+                                <td>
+                                    <span class="status pending">Pendiente</span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>Ana Martínez</td>
+                                <td>Mouse</td>
+                                <td>03/09/2026</td>
+                                <td>$180.000</td>
+                                <td>
+                                    <span class="status paid">Pagado</span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+        </main>
+
+
+      
+
+        <footer class="footer">
+                
+            <p>
+                © 2026 GEDA. Todos los derechos reservados.
+            </p>
+
+            <p>
+                Dashboard Administrativo
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
+
