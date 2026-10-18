@@ -15,7 +15,7 @@
 
     <div class="dashboard">
 
-        <aside class="sidebar">
+        <div class="sidebar">
 
             <div class="logo">
                 GEDA
@@ -53,15 +53,19 @@
                     <span>Cerrar sesión</span>
                 </a>
 
-                <a href= "#" class="nav-logo">
+                <figure class="dashboard-figure">
 
-                    <img src=imagenes/LOGO.png alt="Logo de la aplicación" class="nav-img">
+                    <img src=imagenes/LOGO.png 
+                    alt="Logo de la aplicación" 
+                    class="nav-img">
 
-                </a>
+                </figure>
+
+
 
             </nav>
 
-        </aside>
+        </div>
 
         <header class="header">
 
@@ -218,7 +222,7 @@
                             <tr>
                                 <td>Carlos Pérez</td>
                                 <td>Laptop</td>
-                                <td>06/09/2026</td>
+                                <td><time datetime="2026-09-06">06/09/2026</time></td>
                                 <td>$3.500.000</td>
                                 <td>
                                     <span class="status paid">Pagado</span>
@@ -229,7 +233,7 @@
                             <tr>
                                 <td>María Gómez</td>
                                 <td>Monitor</td>
-                                <td>05/09/2026</td>
+                                <td><time datetime="2026-10-05">05/10/2026</time></td>
                                 <td>$2.100.000</td>
                                 <td>
                                     <span class="status paid">Pagado</span>
@@ -240,7 +244,7 @@
                             <tr>
                                 <td>Juan Rodríguez</td>
                                 <td>Teclado</td>
-                                <td>04/09/2026</td>
+                                <td><time datetime="2026-10-04">04/10/2026</time></td>
                                 <td>$350.000</td>
                                 <td>
                                     <span class="status pending">Pendiente</span>
@@ -251,7 +255,7 @@
                             <tr>
                                 <td>Ana Martínez</td>
                                 <td>Mouse</td>
-                                <td>03/09/2026</td>
+                                <td><time datetime="2026-11-03">03/11/2026</time></td>
                                 <td>$180.000</td>
                                 <td>
                                     <span class="status paid">Pagado</span>
@@ -261,10 +265,24 @@
                         </tbody>
 
                     </table>
-
+                    
                 </div>
 
             </section>
+            
+
+            <aside class="info-complementaria" aria-labelledby="info-title">
+                <h2 id="info-title">Información complementaria</h2>
+                <p>
+                    Este dashboard permite consultar indicadores generales,
+                    revisar las ventas recientes y supervisar la actividad
+                    administrativa del sistema.
+                </p>
+                <p>
+                    <strong>Última actualización:</strong>
+                    <time datetime="2026-10-17">17 de octubre de 2026</time>
+                </p>
+            </aside>
 
 
 
